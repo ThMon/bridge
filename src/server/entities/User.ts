@@ -1,10 +1,10 @@
-import UserQuery from '../models/user.interface';
+import UserQuery from "../models/user.interface";
 
 export default class User implements UserQuery {
-    clientid?: string | undefined;
-    login: string;
-    password: string;
-    clientSecret?: string | undefined;
+  clientid?: string | undefined;
+  login: string;
+  password: string;
+  clientSecret?: string | undefined;
 
   constructor({
     clientid,
@@ -15,9 +15,9 @@ export default class User implements UserQuery {
     clientid?: string | undefined;
     login: string;
     password: string;
-    clientSecret?: string| undefined;
+    clientSecret?: string | undefined;
   }) {
-    this.clientid = clientid
+    this.clientid = clientid;
     this.login = login;
     this.password = password;
     this.clientSecret = clientSecret;

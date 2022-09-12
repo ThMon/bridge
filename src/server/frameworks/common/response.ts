@@ -1,4 +1,4 @@
-import ResponseError from './responseError';
+import ResponseError from "./responseError";
 
 export default class Response {
   public status;

@@ -1,4 +1,4 @@
-import usersRepository from './user.repository';
+import usersRepository from "./user.repository";
 export const repositories = {
   usersRepository,
 };

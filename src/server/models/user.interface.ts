@@ -1,7 +1,6 @@
 export default interface UserQuery {
-    clientid?: string | undefined;
-    login: string;
-    password: string;
-    clientSecret?: string | undefined;
-  }
-  
+  clientid?: string | undefined;
+  login: string;
+  password: string;
+  clientSecret?: string | undefined;
+}

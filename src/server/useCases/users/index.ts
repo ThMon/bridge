@@ -1,5 +1,5 @@
-import loginUserUseCase from './loginUser.useCase';
+import loginUserUseCase from "./loginUser.useCase";
 
 export const userUseCases = {
-  loginUserUseCase
+  loginUserUseCase,
 };

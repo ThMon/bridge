@@ -1,4 +1,4 @@
-import { userUseCases } from './users';
+import { userUseCases } from "./users";
 
 export const useCases = {
   userUseCases,
