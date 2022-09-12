@@ -1,10 +1,8 @@
 import { inMemoryDB } from "../../database/inMemory";
-import UserQuery from "../../../models/user.interface";
 const { users } = inMemoryDB;
 import Response from '../../common/response';
 import ResponseError from '../../common/responseError';
-import jwt from "jsonwebtoken";
-
+var jwt = require('jsonwebtoken');
 
 export default {
     login: async (login: string, password: string): Promise<Response> => {
@@ -29,9 +27,8 @@ export default {
               }),
             });
           }
-
+          
         const refresh_token = await jwt.sign({data: {user: user.login}}, user.clientSecret)
-
 
         return new Response({status: 200, content: {user: user, refresh_token}})
     },

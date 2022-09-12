@@ -6,18 +6,18 @@ export default (dependencies) => {
       userUseCases: { loginUserUseCase },
     },
   } = dependencies;
-  const loginUser = async (request, response) => {
+  const loginUser = async (req, res) => {
+
     try {
-      const { body = {} } = request;
+      const { body = {} } = req;
 
       const { login, password } = body;
-        console.log(login)
       const response = await loginUserUseCase(dependencies).execute({
-        login,
-        password,
-      });
-
-      return response;
+            login,
+            password,
+        });
+       
+        res.json(response);
     } catch (err) {
       return new Response({ status: err.status || 500, error: err });
     }

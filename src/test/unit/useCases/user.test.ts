@@ -58,7 +58,6 @@ describe('Users repository login', () => {
           password: testUserData.password,
         });
 
-        console.log(loggedUser)
         expect(loggedUser.status).toEqual(401);
         expect(loggedUser.error).toEqual({
           error: "Bad password",

@@ -13,7 +13,6 @@ describe('Users repository login', () => {
       });
   
       const loggedUser = await usersRepository.login(user.login, user.password);
-      console.log("loggedUser",loggedUser);
       expect(loggedUser.status).toBe(200);
       expect(loggedUser.content.refresh_token).toBeDefined();
     });
@@ -25,7 +24,6 @@ describe('Users repository login', () => {
       });
   
       const loggedUser = await usersRepository.login(user.login, user.password);
-      console.log("loggedUser",loggedUser);
       expect(loggedUser.status).toBe(404);
     });
 
@@ -36,7 +34,6 @@ describe('Users repository login', () => {
       });
   
       const loggedUser = await usersRepository.login(user.login, user.password);
-      console.log("loggedUser",loggedUser);
       expect(loggedUser.status).toBe(401);
     });
 });

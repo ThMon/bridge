@@ -3,15 +3,16 @@ export default (dependencies) => {
     if (!usersRepository) {
       throw new Error('the users repository should be exist in dependencies');
     }
-  
-    const execute = ({
+
+    const execute = async ({
       login,
       password,
     }: {
         login: string;
-      password: string;
+        password: string;
     }) => {
-      return usersRepository.login(login, password);
+      const res = await usersRepository.login(login, password);
+      return res;
     };
   
     return { execute };
